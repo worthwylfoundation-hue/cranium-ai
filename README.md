@@ -2,7 +2,7 @@
 
 **Status: Intelligence interface & host surface — Non-canonical**
 
-The sole canonical authority source is [`cranium-kernel`](https://github.com/worthwyl2022-cloud/cranium-kernel).
+The sole canonical authority source is [`cranium-kernel`](https://github.com/worthwylfoundation-hue/cranium-kernel).
 
 **WorthWyl presents Convertible Cranium AI** — the conversational intelligence workspace and host that guides users and reviewers through the Convertible Cranium multi-plane cognitive governance substrate.
 
