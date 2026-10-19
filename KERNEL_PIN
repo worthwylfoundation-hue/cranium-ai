@@ -1,2 +1,7 @@
-KERNEL_PIN=c2bd6d3
-KERNEL_COMMIT=c2bd6d38a71f1ae124beec73df68b8af91a23bc0
+KERNEL_PIN=ce24cd4
+KERNEL_COMMIT=ce24cd42ff520ba9e6953ccdda3b818dd6d48687
+KERNEL_REPO=https://github.com/worthwylfoundation-hue/cranium-kernel
+VERIFIED_DILIGENCE_STAMP=ce24cd42ff520ba9e6953ccdda3b818dd6d48687
+VERIFIED_ON=2026-10-19
+VERIFICATION_COMMANDS=npm ci; npm run verify; npm run verify:denial-semantics
+VERIFICATION_RESULT=passed on exact Kernel stamp; main CI passed TypeScript, Android, Enterprise Integration Evidence, and CodeQL
