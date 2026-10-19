@@ -12,28 +12,28 @@ const targets: GroundingTarget[] = [
   {
     repo: "cranium-kernel",
     file: "README.md",
-    url: "https://github.com/worthwyl2022-cloud/cranium-kernel/blob/main/README.md",
+    url: "https://github.com/worthwylfoundation-hue/cranium-kernel/blob/main/README.md",
     authority: "canonical",
     keywords: ["cranium", "kernel", "substrate", "authority", "canonical", "governance", "worthwyl"],
   },
   {
     repo: "cranium-content-hub",
     file: "README.md",
-    url: "https://github.com/worthwyl2022-cloud/cranium-content-hub/blob/main/README.md",
+    url: "https://github.com/worthwylfoundation-hue/cranium-content-hub/blob/main/README.md",
     authority: "supporting",
     keywords: ["cranium", "content", "hub", "acquisition", "documentation", "ecosystem"],
   },
   {
     repo: "cranium-canonlane-contracts",
     file: "README.md",
-    url: "https://github.com/worthwyl2022-cloud/cranium-canonlane-contracts/blob/main/README.md",
+    url: "https://github.com/worthwylfoundation-hue/cranium-canonlane-contracts/blob/main/README.md",
     authority: "canonical",
     keywords: ["canonlane", "contract", "semantic", "conformance", "governance", "cranium"],
   },
   {
     repo: "cranium-synapse",
     file: "README.md",
-    url: "https://github.com/worthwyl2022-cloud/cranium-synapse/blob/main/README.md",
+    url: "https://github.com/worthwylfoundation-hue/cranium-synapse/blob/main/README.md",
     authority: "supporting",
     keywords: ["synapse", "evidence", "attestation", "trust", "ring", "proof"],
   },
@@ -54,14 +54,14 @@ const targets: GroundingTarget[] = [
   {
     repo: "cranium-provider-integrations",
     file: "README.md",
-    url: "https://github.com/worthwyl2022-cloud/cranium-provider-integrations/blob/main/README.md",
+    url: "https://github.com/worthwylfoundation-hue/cranium-provider-integrations/blob/main/README.md",
     authority: "non-authority",
     keywords: ["provider", "model", "anthropic", "perplexity", "routing", "integration"],
   },
   {
     repo: "cranium-substrate-reference",
     file: "README.md",
-    url: "https://github.com/worthwyl2022-cloud/cranium-substrate-reference/blob/main/README.md",
+    url: "https://github.com/worthwylfoundation-hue/cranium-substrate-reference/blob/main/README.md",
     authority: "supporting",
     keywords: ["reference", "epistemic", "substrate", "cognition", "source"],
   },
@@ -79,7 +79,20 @@ export function getGroundingTargets(query: string, limit = 3): GroundingTarget[]
   return matched.length ? matched : targets.slice(0, limit);
 }
 
-const rawUrl = (repo: string, file: string) => `https://raw.githubusercontent.com/worthwyl2022-cloud/${repo}/main/${file}`;
+const hueOwnedRepos = new Set([
+  "cranium-kernel",
+  "cranium-content-hub",
+  "cranium-canonlane-contracts",
+  "cranium-synapse",
+  "cranium-provider-integrations",
+  "cranium-substrate-reference",
+]);
+
+// Private Hue repositories require authenticated server-side retrieval; anonymous raw fetches fail closed.
+const rawUrl = (repo: string, file: string) => {
+  const owner = hueOwnedRepos.has(repo) ? "worthwylfoundation-hue" : "worthwyl2022-cloud";
+  return `https://raw.githubusercontent.com/${owner}/${repo}/main/${file}`;
+};
 
 export async function retrieveGrounding(query: string): Promise<GroundingSource[]> {
   const selected = getGroundingTargets(query);
