@@ -12,7 +12,7 @@ const input = {
     {
       repo: "cranium-kernel",
       file: "README.md",
-      url: "https://github.com/worthwyl2022-cloud/cranium-kernel/blob/main/README.md",
+      url: "https://github.com/worthwylfoundation-hue/cranium-kernel/blob/main/README.md",
       authority: "canonical" as const,
       excerpt: "Only the kernel authority boundary may commit governed state.",
     },
