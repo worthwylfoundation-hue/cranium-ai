@@ -1,6 +1,8 @@
 KERNEL_PIN=ce24cd4
 KERNEL_COMMIT=ce24cd42ff520ba9e6953ccdda3b818dd6d48687
-KERNEL_REPO=https://github.com/worthwylfoundation-hue/cranium-kernel
+KERNEL_REPO=worthwylfoundation-hue/cranium-kernel
+KERNEL_VISIBILITY=private
+KERNEL_AUTHORITY_NOTE=Private repository; exact commit below is the authority revision.
 VERIFIED_DILIGENCE_STAMP=ce24cd42ff520ba9e6953ccdda3b818dd6d48687
 VERIFIED_ON=2026-10-19
 VERIFICATION_COMMANDS=npm ci; npm run verify; npm run verify:denial-semantics

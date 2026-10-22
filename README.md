@@ -2,7 +2,9 @@
 
 **Status: Intelligence interface & host surface — Non-canonical**
 
-The sole canonical authority source is [`cranium-kernel`](https://github.com/worthwylfoundation-hue/cranium-kernel).
+See also: [ECOSYSTEM.md](./ECOSYSTEM.md) · [LICENSE](./LICENSE)
+
+The sole canonical authority source is the private `worthwylfoundation-hue/cranium-kernel` repository, pinned in [`KERNEL_PIN`](./KERNEL_PIN). Logged-out visitors may see a 404 for a private repository.
 
 **WorthWyl presents Convertible Cranium AI** — the conversational intelligence workspace and host that guides users and reviewers through the Convertible Cranium multi-plane cognitive governance substrate.
 
@@ -12,7 +14,7 @@ The sole canonical authority source is [`cranium-kernel`](https://github.com/wor
 
 Convertible Cranium AI is the product and cognition layer. It may route model requests, retrieve research, present source-aware context, retain authenticated conversations, and propose responses or actions. **It does not grant authority, commit governed state, invoke protected tools, or issue authoritative receipts.** Those responsibilities belong exclusively to the Kernel.
 
-> Cognition may come from anywhere. Authority comes only through Convertible Cranium.
+> Cognition may come from anywhere. Authority comes only through the Kernel.
 
 ## What is included
 
